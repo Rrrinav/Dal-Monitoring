@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 210 100% 97%;
+    --foreground: 200 60% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 200 60% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 60% 10%;
+
+    --primary: 199 89% 22%;
+    --primary-foreground: 180 100% 97%;
+
+    --secondary: 188 94% 45%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 40% 92%;
+    --muted-foreground: 200 20% 40%;
+
+    --accent: 180 100% 50%;
+    --accent-foreground: 200 60% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 25% 88%;
+    --input: 214 25% 88%;
+    --ring: 199 89% 22%;
+
+    --radius: 0.75rem;
+    
+    /* Heatmap colors */
+    --heat-low: 142 71% 45%;
+    --heat-medium: 45 93% 47%;
+    --heat-high: 24 95% 53%;
+    --heat-critical: 0 84% 60%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(199 89% 22%), hsl(188 94% 45%));
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100% / 0.9), hsl(210 100% 98% / 0.95));
+    
+    /* Effects */
+    --shadow-glow: 0 0 30px hsl(188 94% 45% / 0.3);
+    --backdrop-blur: blur(12px);
+  }
+
+  .dark {
+    --background: 200 50% 8%;
+    --foreground: 180 100% 97%;
+
+    --card: 200 40% 12%;
+    --card-foreground: 180 100% 97%;
+
+    --popover: 200 40% 12%;
+    --popover-foreground: 180 100% 97%;
+
+    --primary: 188 94% 45%;
+    --primary-foreground: 200 60% 10%;
+
+    --secondary: 199 89% 22%;
+    --secondary-foreground: 180 100% 97%;
+
+    --muted: 200 30% 18%;
+    --muted-foreground: 200 20% 60%;
+
+    --accent: 180 100% 50%;
+    --accent-foreground: 200 60% 10%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 200 30% 20%;
+    --input: 200 30% 20%;
+    --ring: 188 94% 45%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(199 89% 22%), hsl(188 94% 45%));
+    --gradient-card: linear-gradient(180deg, hsl(200 40% 12% / 0.9), hsl(200 45% 14% / 0.95));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
